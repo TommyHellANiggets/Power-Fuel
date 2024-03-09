@@ -1,0 +1,116 @@
+:root {
+    --main_color: #123123;
+    --color-black: #000004;
+}
+
+*{
+    margin: 0; /*Обнуление отступов задаваемых браузером*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Общие стили для скроллбара */
+::-webkit-scrollbar {
+    width: 1%; /* Ширина скроллбара */
+    z-index: 200; 
+  }
+  
+  /* Фон скроллбара */
+  ::-webkit-scrollbar-track {
+    background: #333; /* Цвет фона */
+  }
+  
+  /* Стиль ползунка скроллбара */
+  ::-webkit-scrollbar-thumb {
+    background: #666; /* Цвет ползунка */
+    border-radius: 6px; /* Закругление углов */
+  }
+  
+  /* При наведении */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Измененный цвет при наведении */
+  }
+  
+html {
+    background-color: var(--color-black);
+}
+
+nav, main, footer {
+    background-color: var(--color-black) !important;
+}
+
+footer {
+    height: 300px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    z-index: 1000;
+  }
+
+.parallax_2{
+    background: url("img/adrien-olichon-_GH9LwhlSO4-unsplash.jpg"); /*Здесь мы задаем фон*/
+    background-repeat: no-repeat; /*Запрещаем повтор изображения на фоне, для того что бы при уменьшении не было других копий фона*/
+    background-position: center; /*Центрируем фон*/
+    background-size: cover; /*Указываем что наш фон будет РАВНОМЕРНО заполнять блок*/
+    background-attachment: fixed; /*Самое главное свойство которое и дает нам эффект параллакса*/
+    padding: 10vh 0 10vh 0; /*Здесь общая сумма отступа сверху и снизу должна составлять 100, для того что бы блок занимал всю высоту экрана*/
+    text-align: center; /*Центрируем текст*/
+}
+.parallax_1 h1{
+    color: white; /*Цвет текста*/
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /*Шрифт текста*/
+    font-weight: normal; /*Убираем жирность текста*/
+    font-size: 45px; /*Размер шрифта*/
+    letter-spacing: 2px; /*Расстояние между буквами*/
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /*Тень от текста*/
+}
+.parallax_1{
+    background: url(https://catherineasquithgallery.com/uploads/posts/2021-03/1614674543_59-p-fon-sportivnoe-pitanie-81.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30vh 0 30vh 0; /*Здесь общая сумма отступа сверху и снизу должна составлять 100, для того что бы блок занимал всю высоту экрана*/
+}
+.content_1{
+    text-align: center; /*Центрируем текст*/
+    padding: 80px; /*Внутренние отступы которые позволяют тексту находится по центру*/
+}
+.content_1 p, .content_2 p{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 830px; /*Ограничеваем блок текста по ширине*/
+    display: inline-block; /* После предыдущего свойства текст съезжает в начало страницы, поэтому мы прописываем это свойство*/
+    letter-spacing: 2px; /*Расстояние между буквами*/
+    opacity: 1; /*Настраиваем непрозрачность основного текста*/
+}
+.content_1 h1{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    padding-bottom: 25px; /*Отделяем заголовок от основного текста*/
+    opacity: 0.8; /*Настраиваем непрозрачность заголовка*/
+    letter-spacing: 1px; /*Расстояние между буквами*/
+}
+.content_2{
+    text-align: center;
+    padding: 120px;
+}
+
+.content_custom {
+    background-color: var(--color-black);
+    height: 70vw !important;
+}
+
+.parallelogram {
+    width: 50vw;
+    height: 20vw;
+    background: var(--color-black);
+    transform: skew(-20deg);
+  } 
+
+.box-parrallelogram {
+    display: flex;
+    justify-content: center;
+}
