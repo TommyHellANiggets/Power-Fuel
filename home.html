@@ -1,101 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PowerFuel | Главная</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="shortcut icon" href="img/protein.png" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример сайта</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключение пользовательских стилей -->
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-flow py-4">
-        <div class="container">
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <div class="container" style="font-family: Roboto Mono, monospace;">
+        <!-- Лого и название -->
         <a class="navbar-brand" href="#">
-            <img src="img/protein.png" alt="Sport Nutrition Logo" width="30" height="30" class="d-inline-block align-top">
-            PowerFuel
+            <h3 style="font-weight: 600; font-size: 24px; letter-spacing: 1px; margin-top: -10px;">Power Fuel</h3>
+            <p style="font-weight: 400; font-size: 14px; letter-spacing: 3px; margin-top: -15px; margin-bottom: -5px; color: lightgray;">- be the best</p>
         </a>
+        <!-- Кнопка для мобильных устройств (если нужно) -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Главная</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Каталог</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">О Нас</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person"></i> Профиль
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Личный кабинет</a></li>
-                <li><a class="dropdown-item" href="#">Корзина</a></li>
-                </ul>
-            </li>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- Главная -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Главная</a>
+                </li>
+                <!-- Каталог -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Каталог</a>
+                </li>
+                <!-- Профиль -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Профиль
+                    </a>
+                    <ul class="dropdown-menu" style="margin-top: 10px;" aria-labelledby="navbarDropdown">
+                        <!-- Личный кабинет -->
+                        <li><a class="dropdown-item" href="#">Личный кабинет</a></li>
+                        <div class="dropdown-divider"></div> <!-- Горизонтальная линия -->
+                        <!-- Корзина -->
+                        <li><a class="dropdown-item" href="#">Корзина</a></li>
+                        <!-- Войти -->
+                        <li><a class="dropdown-item" href="#">Войти</a></li>
+                        <!-- Регистрация -->
+                        <li><a class="dropdown-item" href="#">Регистрация</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
+    </div>
+</nav>
+
+<!-- Ваш существующий HTML-код -->
+<div class="container-fluid con-fl-bg">
+    <div class="container con-bg">
+        <div class="cards-container pt-3" id="cardsContainer">
+            <!-- Карточки будут динамически добавлены здесь -->
         </div>
-    </nav>
+    </div>
+</div>
 
-    <header>
 
 
-            <div class="container-fluid content_1">
-                <div class="carousel slide" style="max-width: 70vw; margin: 0 auto; max-width: 1300px;" id="carouselExampleControls" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/slide1.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/slide2.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/slide3.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <div class="container-main">
-                    <div class="text_hellow">
-                        <h1 style="margin-bottom: 25px;">Добро пожаловать!</h1>
-                        <p>Здесь вы можете найти спортивное питание и добавки для спорта абсолютно разных брендов по приемлимой цене</p>
-                    </div>
-                </div>
-            </div>
-        
-        <div class="contaner-fluid content_custom">
-            <div class="content_1">
-                <div class="">
-                </div>
-              </div>
-          </div>
-        </div> 
 
-    </header>
-    <footer>
-        1
-    </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-  <script src="script.js"></script>
+<!-- Подключение Bootstrap JS -->
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
