@@ -1,12 +1,26 @@
 :root {
-    --main_color: #123123;
-    --color-black: #000004;
+    --color-nav: #d80000;
+    --main_color: #eeeeee;
+    --color-black: #d1d1d1;
+    --color-text: #9b9b9b;
+
 }
 
 *{
     margin: 0; /*Обнуление отступов задаваемых браузером*/
     padding: 0;
     box-sizing: border-box;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, p {
+    font-family: "Poppins", sans-serif !important;
+}
+
+.text_hellow {
+    color: var(--color-text);
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto !important;
 }
 
 /* Общие стили для скроллбара */
@@ -35,7 +49,11 @@ html {
     background-color: var(--color-black);
 }
 
-nav, main, footer {
+nav {
+    background-color: var(--color-nav) !important;
+}
+
+main, footer {
     background-color: var(--color-black) !important;
 }
 
@@ -43,21 +61,31 @@ footer {
     height: 300px;
 }
 
+.bg-w {
+    background-color: var(--main_color);
+}
+
+.container-main {
+    background-color: var(--main_color);
+    border-radius: 20px 20px 0 0;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
 .navbar {
-    position: fixed;
     top: 0;
     width: 100vw;
-    height: 50px;
+    height:60px;
     z-index: 1000;
   }
 
 .parallax_2{
-    background: url("img/adrien-olichon-_GH9LwhlSO4-unsplash.jpg"); /*Здесь мы задаем фон*/
+    background: url("img/foto-pitanie.jpg"); /*Здесь мы задаем фон*/
     background-repeat: no-repeat; /*Запрещаем повтор изображения на фоне, для того что бы при уменьшении не было других копий фона*/
     background-position: center; /*Центрируем фон*/
     background-size: cover; /*Указываем что наш фон будет РАВНОМЕРНО заполнять блок*/
     background-attachment: fixed; /*Самое главное свойство которое и дает нам эффект параллакса*/
-    padding: 10vh 0 10vh 0; /*Здесь общая сумма отступа сверху и снизу должна составлять 100, для того что бы блок занимал всю высоту экрана*/
+    padding: 20vh 0 20vh 0; /*Здесь общая сумма отступа сверху и снизу должна составлять 100, для того что бы блок занимал всю высоту экрана*/
     text-align: center; /*Центрируем текст*/
 }
 .parallax_1 h1{
