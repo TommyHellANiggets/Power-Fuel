@@ -1,5 +1,7 @@
 :root {
     --color-blue: #3609b3;
+    --color-gray2:rgb(55, 59, 82);
+
     --color-gray: #dfdfdf;
     --color-white: #f8f8f8;
     --color-card: #0a31df42;
@@ -8,14 +10,35 @@
 
 }
 
+/* Скрыть стандартный скроллбар */
+::-webkit-scrollbar {
+    width: 4px; /* Ширина скроллбара */
+}
+
+/* Стилизация трека */
+::-webkit-scrollbar-track {
+    background: var(--color-gray2); /* Цвет фона трека */
+}
+
+/* Стилизация полосы прокрутки */
+::-webkit-scrollbar-thumb {
+    background: var(--color-gray); /* Цвет полосы прокрутки */
+    border-radius: 5px; /* Закругление углов */
+}
+
+/* При наведении курсора на скроллбар */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-white); /* Измененный цвет полосы прокрутки при наведении */
+}
+
+
 html, body {
     background-color: var(--color-gray);
 }
 
 /* Navbar adjustments */
 .navbar-custom {
-    background: rgb(0,112,255);
-    background: linear-gradient(123deg, rgba(0,112,255,1) 0%, rgba(20,6,128,1) 92%);
+    background-color: var(--color-gray2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +84,7 @@ html, body {
     right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
-    color: var(--color-blue);
+    color: var(--color-gray2);
     font-weight: 900;
     font-size: 22px;
     display: none;
@@ -85,7 +108,7 @@ html, body {
 }
 
 #inputField::placeholder {
-    color: var(--color-find);
+    color: var(--color-gray2);
 }
 
 
@@ -120,11 +143,11 @@ html, body {
 
 /* Other styles */
 .dropdown-menu {
-    background-color: var(--color-white);
+    background-color: var(--color-gray2);
 }
 
 .dropdown-menu a {
-    color: var(--color-blue);
+    color: var(--color-white);
 }
 
 .con-fl-bg {
