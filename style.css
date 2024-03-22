@@ -1,19 +1,99 @@
 :root {
     --color-blue: #3609b3;
-    --color-gray: #d3d3d3;
+    --color-gray: #dfdfdf;
     --color-white: #f8f8f8;
+    --color-card: #0a31df42;
+    --color-find: #5a64ec;
+
+
 }
 
-html {
+html, body {
     background-color: var(--color-gray);
 }
 
+/* Navbar adjustments */
 .navbar-custom {
-    background-color: var(--color-blue);
+    background: rgb(0,112,255);
+    background: linear-gradient(123deg, rgba(0,112,255,1) 0%, rgba(20,6,128,1) 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
 }
+
+.nav-item {
+    position: relative;
+    list-style: none; /* Убираем маркеры списка */
+}
+
+.nav-link {
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    color: black; /* Цвет текста */
+}
+
+.dropdown-item .nav-text {
+    margin-top: 0 !important;
+}
+
+
+.bi {
+    font-size: 18px; /* Размер иконки */
+    position: absolute;
+    margin-left: 16px;
+    margin-top: 12px;
+}
+
+.nav-text {
+    margin-top: 32px !important; /* Расстояние от иконки до текста */
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.clear-icon {
+    position: absolute;
+    margin-top: -22px;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--color-blue);
+    font-weight: 900;
+    font-size: 22px;
+    display: none;
+}
+
+.clear-icon:hover {
+    color: #555;
+}
+
+
+#inputField {
+    max-width: 500px;
+    width: 50vw;
+    height: 40px;
+    margin: auto 0 ;
+    font-size: 12px;
+    border-radius: 10px;
+    border-style: none;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+#inputField::placeholder {
+    color: var(--color-find);
+}
+
+
 
 .navbar-brand {
     color: #ffffff;
+    flex-grow: 0;
+    margin-top: 28px;
 }
 
 .navbar-brand:hover,
@@ -21,10 +101,24 @@ html {
     color: #ffffff;
 }
 
-.navbar-nav .nav-link {
-    color: #ffffff;
+.navbar-nav {
+    flex-grow: 1;
+    justify-content: flex-end;
 }
 
+.nav-link {
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* Other styles */
 .dropdown-menu {
     background-color: var(--color-white);
 }
@@ -33,54 +127,52 @@ html {
     color: var(--color-blue);
 }
 
-.nav-link {
-    color: #ffffff !important;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.nav-link:focus,
-.nav-link:hover {
-    color: #ffffff !important;
-}
-
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 934px; /* Максимальная ширина контейнера */
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-#inputField {
-    width: 100px;
-    height: 30px;
-    padding: 10px;
-    font-size: 12px;
-}
-
 .con-fl-bg {
-    background-color: var(--color-gray) !important;
+    background-color: var(--color-gray); /* Прозрачный белый */
+    padding-top: 10px;
+
 }
 
 .con-bg {
-    background-color: var(--color-white) !important;
+    max-width: 1000px;
+    background-color: rgb(248, 248, 248); /* Прозрачный белый */
+    border-radius: 15px 15px 0 0;
+}
+
+.card {
+    border: 2px solid var(--color-card);
+    width: 150px; /* Ширина карточки */
+    overflow: hidden; /* Скрыть изображение, выходящее за пределы карточки */
+    border-radius: 10px; /* Скруглить углы карточки */
+    margin: 0 auto; /* Центрирование карточки */
+}
+
+.card img {
+    width: 100%; /* Ширина изображения заполняет всю доступную область карточки */
+    height: auto; /* Высота изображения автоматически подстраивается */
+    object-fit: cover; /* Изображение занимает всю доступную область */
+    object-position: center top; /* Позиционирование изображения вверху */
+}
+
+.card .card-body {
+    padding: 10px; /* Отступы внутри содержимого карточки */
+    height: 100px; /* Высота содержимого карточки */
+    background-color: #f8f9fa; /* Цвет фона содержимого карточки */
 }
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Изменено на auto-fit */
-    gap: 10px; /* Уменьшаем расстояние между карточками */
-    max-width: 960px; /* Ограничиваем максимальную ширину контейнера */
-    margin: 0 auto; /* Центрируем контейнер */
+    grid-template-columns: repeat(6, 150px); /* 6 карточек в строку шириной по 150px */
+    gap: 10px; /* Расстояние между карточками */
+    max-width: 800px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    justify-content: center; /* Выравнивание карточек по центру */
 }
 
-
-.card {
-    max-width: 100%; /* Чтобы карточки масштабировались при уменьшении экрана */
+.search-input {
+    margin-top: 22px !important;
 }
 
-.card img {
-    max-width: 100%; /* Изображения внутри карточек масштабируются по ширине */
-    border-radius: 10px 10px 0 0;
+.navbar-brand {
+    font-family: "Nunito", sans-serif !important;
 }

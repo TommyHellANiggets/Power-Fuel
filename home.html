@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пример сайта</title>
     <!-- Подключение Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Подключение пользовательских стилей -->
     <link href="style.css" rel="stylesheet">
@@ -12,30 +18,43 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-    <div class="container" style="font-family: Roboto Mono, monospace;">
+    <div class="naver d-flex">
         <!-- Лого и название -->
         <a class="navbar-brand" href="#">
             <h3 style="font-weight: 600; font-size: 24px; letter-spacing: 1px; margin-top: -10px;">Power Fuel</h3>
             <p style="font-weight: 400; font-size: 14px; letter-spacing: 3px; margin-top: -15px; margin-bottom: -5px; color: lightgray;">- be the best</p>
         </a>
+        <div class="search-container">
+            <input type="text" id="inputField" class="search-input" placeholder="Искать на Power Fuel" oninput="toggleClearButton()">
+            <span class="clear-icon" onclick="clearInputField()">&times;</span>
+        </div>
+        
+        
+
         <!-- Кнопка для мобильных устройств (если нужно) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" style="margin-left: 10px; background-color: #ffffff;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <!-- Главная -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Главная</a>
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-house"></i>
+                        <p class="nav-text">Главная</p>
+                    </a>
                 </li>
                 <!-- Каталог -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Каталог</a>
+                    <a class="nav-link" href="catalog.html">
+                        <i class="bi bi-journal-text"></i>
+                        <p class="nav-text">Каталог</p>
+                    </a>
                 </li>
                 <!-- Профиль -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Профиль
+                <li class="nav-item dropdown" >
+                    <a class="nav-link dropdown-toggle nav-text" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person" style="margin-top: -20px; padding-left: 8px;"></i> Профиль
                     </a>
                     <ul class="dropdown-menu" style="margin-top: 10px;" aria-labelledby="navbarDropdown">
                         <!-- Личный кабинет -->
@@ -49,21 +68,85 @@
                         <li><a class="dropdown-item" href="#">Регистрация</a></li>
                     </ul>
                 </li>
+
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Ваш существующий HTML-код -->
 <div class="container-fluid con-fl-bg">
     <div class="container con-bg">
+        
+        <a href="catalog.html" style="text-decoration: none;"><h3 style="padding: 15px 0 0 20px;">Перейти в Каталог</h3></a>
         <div class="cards-container pt-3" id="cardsContainer">
-            <!-- Карточки будут динамически добавлены здесь -->
+            <div class="card">
+                <img src="https://www.theihcc.com/wp-content/uploads/2019/12/buy-Trenbolone-Acetate-Injection-1-682x682-1-2048x2048.jpg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Тренболон</h5>
+                    <p class="card-text">Описание карточки 1</p>
+                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://s9.profarm4.top/uploads/store/product/9e6d0ab3884623d89541ede7d2e1e8b0.jpg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Местеролон</h5>
+                    <p class="card-text">Описание карточки 2</p>
+                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://fitherb.ru/uploads/product/1400/1494/core-labs-x-tren-plus-rx-60-caps_2020-05-24_13-45-39.JPG" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Трендион</h5>
+                    <p class="card-text">Описание карточки 3</p>
+                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="http://under-fit.ru/thumb/2/EzHNVL1JezPCV8M8FCMggQ/1600r1600/d/851868364_w640_h640_nordex-somatropin-100ed.jpg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Гормон роста</h5>
+                    <p class="card-text">Описание карточки 4</p>
+                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                </div>
+            </div>
+            <div class="card">
+                <a href=""><img src="https://images-na.ssl-images-amazon.com/images/I/81hB6eSoDJL._AC_SL1500_.jpg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Протеин</h5>
+                    <p class="card-text">Описание карточки 5</p>
+                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                </div></a>
+                
+            </div>
+            <div class="card">
+                <img src="https://smolensk.2scoop.ru/upload/iblock/eb2/eb2b523d88e43835a8101e2fbfc97d92.jpg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Креатин</h5>
+                    <p class="card-text">Описание карточки 6</p>
+                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://main-cdn.sbermegamarket.ru/hlr-system/1509934/100023624411b0.jpg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Гейнер</h5>
+                    <p class="card-text">Описание карточки 7</p>
+                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://fitmag.ru/images/15066vgchg.jpg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">BCAA</h5>
+                    <p class="card-text">Описание карточки 8</p>
+                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-
 
 
 <!-- Подключение Bootstrap JS -->
