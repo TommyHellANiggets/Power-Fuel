@@ -40,21 +40,21 @@
                 <!-- Главная -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <i class="bi bi-house"></i>
+                        <i class="bi bi-house biba"></i>
                         <p class="nav-text">Главная</p>
                     </a>
                 </li>
                 <!-- Каталог -->
                 <li class="nav-item">
                     <a class="nav-link" href="catalog.html">
-                        <i class="bi bi-journal-text"></i>
+                        <i class="bi bi-journal-text biba"></i>
                         <p class="nav-text">Каталог</p>
                     </a>
                 </li>
                 <!-- Профиль -->
                 <li class="nav-item dropdown" >
                     <a class="nav-link dropdown-toggle nav-text" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-person" style="margin-top: -20px; padding-left: 8px;"></i> Профиль
+                        <i class="bi bi-person biba" style="margin-top: -20px; padding-left: 8px;"></i> Профиль
                     </a>
                     <ul class="dropdown-menu" style="margin-top: 10px;" aria-labelledby="navbarDropdown">
                         <!-- Личный кабинет -->
@@ -76,78 +76,123 @@
 </nav>
 
 <div class="container-fluid con-fl-bg">
-    <div class="container con-bg">
-        
-        <a href="catalog.html" style="text-decoration: none; color: var(--color-gray2);"><h3 style="padding: 15px 0 0 20px;">Перейти в Каталог<i class="bi bi-arrow-right-short" style="margin-left: 0px; margin-top: 0px; font-size: 32px; font-weight: 900"></i></h3></a>
+    <div class="container con-bg pb-3">
+        <a href="catalog.html" style="text-decoration: none; color: var(--color-gray2);">
+            <h3 style="padding: 15px 0 0 20px;">Перейти в Каталог
+                <i class="bi bi-arrow-right-short" style="margin-left: 0px; margin-top: 0px; font-size: 32px; font-weight: 900"></i>
+            </h3>
+        </a>
         <div class="cards-container pt-3" id="cardsContainer">
-            <div class="card">
+             <!-- Карточка 1 -->
+             <div class="card">
                 <img src="https://www.theihcc.com/wp-content/uploads/2019/12/buy-Trenbolone-Acetate-Injection-1-682x682-1-2048x2048.jpg" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Тренболон</h5>
-                    <p class="card-text">Описание карточки 1</p>
-                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                    <div class="quantity-container">
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-btn"><i class="bi bi-cart"></i></button>
+                    </div>
                 </div>
             </div>
+
+            <!-- Карточка 2 -->
             <div class="card">
                 <img src="https://s9.profarm4.top/uploads/store/product/9e6d0ab3884623d89541ede7d2e1e8b0.jpg" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Местеролон</h5>
-                    <p class="card-text">Описание карточки 2</p>
-                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                    <div class="quantity-container">
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-btn"><i class="bi bi-cart"></i></button>
+                    </div>
                 </div>
             </div>
+            <!-- Карточка 3 -->
             <div class="card">
                 <img src="https://fitherb.ru/uploads/product/1400/1494/core-labs-x-tren-plus-rx-60-caps_2020-05-24_13-45-39.JPG" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Трендион</h5>
-                    <p class="card-text">Описание карточки 3</p>
-                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                    <div class="quantity-container">
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-btn"><i class="bi bi-cart"></i></button>
+                    </div>
                 </div>
             </div>
+            <!-- Карточка 4 -->
             <div class="card">
                 <img src="http://under-fit.ru/thumb/2/EzHNVL1JezPCV8M8FCMggQ/1600r1600/d/851868364_w640_h640_nordex-somatropin-100ed.jpg" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Гормон роста</h5>
-                    <p class="card-text">Описание карточки 4</p>
-                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                    <div class="quantity-container">
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-btn"><i class="bi bi-cart"></i></button>
+                    </div>
                 </div>
             </div>
+            <!-- Карточка 5 -->
             <div class="card">
-                <a href=""><img src="https://images-na.ssl-images-amazon.com/images/I/81hB6eSoDJL._AC_SL1500_.jpg" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Протеин</h5>
-                    <p class="card-text">Описание карточки 5</p>
-                    <p class="card-link" style="color: #007bff;">Подробнее</p>
-                </div></a>
-                
+                <img src="https://images-na.ssl-images-amazon.com/images/I/81hB6eSoDJL._AC_SL1500_.jpg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Протеин</h5>
+                        <div class="quantity-container">
+                            <input type="number" class="quantity-input" value="1" min="1">
+                            <button class="add-to-cart-btn"><i class="bi bi-cart"></i></button>
+                        </div>
+                    </div>
             </div>
+            <!-- Карточка 6 -->
             <div class="card">
                 <img src="https://smolensk.2scoop.ru/upload/iblock/eb2/eb2b523d88e43835a8101e2fbfc97d92.jpg" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Креатин</h5>
-                    <p class="card-text">Описание карточки 6</p>
-                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                    <div class="quantity-container">
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-btn"><i class="bi bi-cart"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <img src="https://main-cdn.sbermegamarket.ru/hlr-system/1509934/100023624411b0.jpg" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Гейнер</h5>
-                    <p class="card-text">Описание карточки 7</p>
-                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                    <div class="quantity-container">
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-btn"><i class="bi bi-cart"></i></button>
+                    </div>
                 </div>
             </div>
+            <!-- Карточка 8 -->
             <div class="card">
                 <img src="https://fitmag.ru/images/15066vgchg.jpg" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">BCAA</h5>
-                    <p class="card-text">Описание карточки 8</p>
-                    <p class="card-link" style="color: #007bff;">Подробнее</p>
+                    <div class="quantity-container">
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-btn"><i class="bi bi-cart"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="container con-bg mt-3">
+    <div class="row">
+        <div class="comment-container">
+            <div class="comment">Комментарий 1</div>
+            <div class="comment">Комментарий 2</div>
+            <div class="comment">Комментарий 3</div>
+        </div>
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="comment">Оставить отзыв:</label>
+            <textarea class="form-control" id="comment" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+</div>
+
+       
 
 
 <!-- Подключение Bootstrap JS -->
