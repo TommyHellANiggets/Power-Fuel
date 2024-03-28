@@ -1,0 +1,262 @@
+:root {
+    --color-blue: #3609b3;
+    --color-gray2:rgb(55, 59, 82);
+
+    --color-gray: #dfdfdf;
+    --color-white: #f8f8f8;
+    --color-card: #0a31df42;
+    --color-find: #5a64ec;
+
+
+}
+
+/* Скрыть стандартный скроллбар */
+::-webkit-scrollbar {
+    width: 4px; /* Ширина скроллбара */
+}
+
+/* Стилизация трека */
+::-webkit-scrollbar-track {
+    background: var(--color-gray2); /* Цвет фона трека */
+}
+
+/* Стилизация полосы прокрутки */
+::-webkit-scrollbar-thumb {
+    background: var(--color-gray); /* Цвет полосы прокрутки */
+    border-radius: 5px; /* Закругление углов */
+}
+
+/* При наведении курсора на скроллбар */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-white); /* Измененный цвет полосы прокрутки при наведении */
+}
+
+
+html, body {
+    background-color: var(--color-gray2);
+}
+
+/* Navbar adjustments */
+.navbar-custom {
+    background-color: var(--color-gray2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.nav-item {
+    position: relative;
+    list-style: none; /* Убираем маркеры списка */
+}
+
+.nav-link {
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    color: black; /* Цвет текста */
+}
+
+.dropdown-item .nav-text {
+    margin-top: 0 !important;
+}
+
+
+.biba {
+    font-size: 18px; /* Размер иконки */
+    position: absolute;
+    margin-left: 16px;
+    margin-top: 12px;
+}
+
+.nav-text {
+    margin-top: 32px !important; /* Расстояние от иконки до текста */
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.clear-icon {
+    position: absolute;
+    margin-top: -22px;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--color-gray2);
+    font-weight: 900;
+    font-size: 22px;
+    display: none;
+}
+
+.clear-icon:hover {
+    color: #555;
+}
+
+
+#inputField {
+    max-width: 500px;
+    width: 50vw;
+    height: 40px;
+    margin: auto 0 ;
+    font-size: 12px;
+    border-radius: 10px;
+    border-style: none;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+#inputField::placeholder {
+    color: var(--color-gray2);
+}
+
+.navbar-brand {
+    color: #ffffff;
+    flex-grow: 0;
+    margin-top: 28px;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #ffffff;
+}
+
+.navbar-nav {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* Other styles */
+.dropdown-menu {
+    background-color: var(--color-gray2);
+}
+
+.dropdown-menu a {
+    color: var(--color-white);
+}
+
+.con-fl-bg {
+    background-color: var(--color-gray); /* Прозрачный белый */
+    padding-top: 10px;
+    border-radius: 20px 20px 0 0;
+}
+
+.con-bg {
+    max-width: 1000px;
+    background-color: rgb(248, 248, 248); /* Прозрачный белый */
+    border-radius: 15px;
+}
+
+.card {
+    border: 1px solid var(--color-gray2);
+    width: 150px; /* Ширина карточки */
+    overflow: hidden; /* Скрыть изображение, выходящее за пределы карточки */
+    border-radius: 10px; /* Скруглить углы карточки */
+    margin: 0 auto; /* Центрирование карточки */
+    position: relative;
+}
+
+.card img {
+    width: 100%; /* Ширина изображения заполняет всю доступную область карточки */
+    height: auto; /* Высота изображения автоматически подстраивается */
+    object-fit: cover; /* Изображение занимает всю доступную область */
+    object-position: center top; /* Позиционирование изображения вверху */
+    max-height: 150px;
+    max-width: 150px;
+
+}
+
+.card .card-body {
+    padding: 10px; /* Отступы внутри содержимого карточки */
+    height: 130px; /* Высота содержимого карточки */
+    background-color: #f8f9fa; /* Цвет фона содержимого карточки */
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(6, 150px); /* 6 карточек в строку шириной по 150px */
+    gap: 10px; /* Расстояние между карточками */
+    margin: 0 auto; /* Центрирование контейнера */
+    justify-content: center; /* Выравнивание карточек по центру */
+}
+
+.search-input {
+    margin-top: 22px !important;
+}
+
+.navbar-brand {
+    font-family: "Nunito", sans-serif !important;
+}
+
+.quantity-input {
+    height: 30px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color-gray2);
+    padding-left: 10px;
+    color: var(--color-gray2);
+}
+
+.quantity-container {
+    position: absolute; /* Позиционируем контейнер с количеством товаров абсолютно внутри карточки */
+    left: 10px; /* Отступ слева */
+    bottom: 10px; /* Отступ снизу */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+.add-to-cart-btn {
+    position: absolute; /* Позиционируем кнопку абсолютно внутри родительского элемента */
+    bottom: 0px; /* Выравниваем кнопку по нижнему краю */
+    left: 45px; /* Отступ справа */
+    border-radius: 5px;
+    border: 1px solid var(--color-gray2);
+    background-color: var(--color-gray2);
+    color: var(--color-white);
+    width: 80px;
+    height: 30px;
+}
+
+
+/* Блок отзывов */
+ 
+.comment-container {
+    position: relative;
+    overflow: hidden;
+    height: 120px; /* Ограничиваем высоту контейнера, чтобы видеть только 3 комментария */
+}
+
+.comment {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px; /* Ограничиваем ширину текста комментария */
+    padding: 10px;
+    margin-right: 100px; /* Добавляем промежуток между комментариями */
+    white-space: nowrap;
+    animation: moveComment 10s linear infinite;
+}
+
+@keyframes moveComment {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
